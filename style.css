@@ -227,10 +227,9 @@ footer a {
 
 .card-ig::after {
   position: absolute;
-  bottom: -5px;
   background: linear-gradient(to right, #fdc468, #df4996);
   top: -5px;
-  bottom: 0;
+  bottom: 5px;
   left: 0;
   right: 0;
   content: "";

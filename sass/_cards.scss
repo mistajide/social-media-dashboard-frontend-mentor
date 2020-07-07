@@ -55,10 +55,9 @@
 
 .card-ig::after {
     position: absolute;
-    bottom: -5px;
     background: $instagram;
     top: -5px;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
     right: 0;
     content: '';
