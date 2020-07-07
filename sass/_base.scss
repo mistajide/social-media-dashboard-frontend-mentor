@@ -1,0 +1,130 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$Inter: 'Inter', sans-serif;
+
+// Colors
+// Universal
+
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youtube: hsl(348, 97%, 39%);
+
+// Toggle Colors
+
+$toggle-dark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+$toggle-light: hsl(230, 22%, 74%);
+
+// Dark Theme Colors
+
+$bg-dark: hsl(230, 17%, 14%);
+$top-bg-pattern-dark: hsl(232, 19%, 15%);   
+$card-bg-dark: hsl(228, 28%, 20%);
+$card-hover-dark: #333a5b;
+$text-dark1: hsl(228, 34%, 66%);
+$text-dark2: hsl(0, 0%, 100%);
+
+// Light Theme Colors
+
+$bg-white: hsl(0, 0%, 100%);
+$top-bg-pattern-light: hsl(225, 100%, 98%);
+$card-bg-light: hsl(227, 47%, 96%);
+$card-hover-light: #cbd2ed;
+$text-light1: hsl(228, 12%, 44%);
+$text-light2: hsl(230, 17%, 14%);
+
+
+// Base Settings
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --bg: #{$bg-dark};
+    --bg-top: #{$top-bg-pattern-dark};
+    --card: #{$card-bg-dark};
+    --card-hover: #{$card-hover-dark};
+    --primary-font: #{$text-dark1};
+    --secondary-font: #{$text-dark2};
+}
+  
+[data-theme=dark] {
+    --bg: #{$bg-white};
+    --bg-top: #{$top-bg-pattern-light};
+    --card: #{$card-bg-light};
+    --card-hover: #{$card-hover-light};
+    --primary-font: #{$text-light1};
+    --secondary-font: #{$text-light2};
+}
+
+html {
+    font-size: 14px;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(180deg, var(--bg-top) 25%, var(--bg) 25%);
+    color: var(--secondary-font);
+    font-family: $Inter;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+    background: linear-gradient(180deg, var(--bg-top) 30%, var(--bg) 30%);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--secondary-font);
+}
+
+h1  {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+
+.followers-text {
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: var(--primary-font);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.overview {
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 11px;
+    margin: 2rem;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}

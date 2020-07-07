@@ -1,0 +1,96 @@
+.card{
+    background-color: var(--card);
+    height: 250px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-small {
+    height: 120px;
+    background-color: var(--card);
+    padding: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: grid;
+    grid-gap: 1rem;
+    text-align: justify;
+    grid-template-columns: repeat(2, 1fr);
+
+    span {
+        color: var(--primary-font);
+    }
+
+    .social-icon {
+        justify-self: end;
+    }
+
+    .float-right {
+        justify-self: end;
+    }
+}
+
+.card:hover, .card-small:hover {
+    background-color: var(--card-hover);
+}
+
+.card-fb {
+    border-top: 5px solid $facebook;
+}
+.card-tw {
+    border-top: 5px solid $twitter;
+}
+.card-ig {
+    border: 0px;
+    border-top: 5px solid;
+    border-image: $instagram;
+    border-image-slice: 1;
+}
+
+.card-yt {
+    border-top: 5px solid $youtube;
+}
+
+
+.cards-square, .card-rectangle {
+    max-width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.count {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link, .gained-today, .gained-today-fall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: $Inter;
+  
+  img {
+    margin-right: 5px;
+  }
+}
+
+.social-link {
+    color: var(--primary-font);
+}
+
+.gained-today {
+    color: $lime-green;
+}
+
+.gained-today-fall {
+    color: $bright-red;
+}
