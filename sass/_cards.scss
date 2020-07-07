@@ -44,11 +44,32 @@
 .card-tw {
     border-top: 5px solid $twitter;
 }
+// .card-ig {
+//     border: 0px;
+//     border-top: 5px solid;
+//     border-image: $instagram;
+//     border-image-slice: 1;
+// }
+
 .card-ig {
-    border: 0px;
-    border-top: 5px solid;
-    border-image: $instagram;
-    border-image-slice: 1;
+    position: relative;
+    border-top: 5px solid transparent;
+    border-radius: 5px;
+    background-clip: padding-box;
+    padding: 10px;
+}
+
+.card-ig::after {
+    position: absolute;
+    bottom: -5px;
+    background: $instagram;
+    top: -5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    z-index: -1;
+    border-radius: 5px;
 }
 
 .card-yt {
